@@ -21,7 +21,9 @@ export default function Skills() {
 	};
 
 	return (
-		<div className="px-[19%] max-[1516px]:px-[12%] max-[1195px]:px-[3%] min-h-screen flex flex-col items-center justify-center gap-y-20">
+		<div
+			id="skills"
+			className="px-[19%] max-[1516px]:px-[12%] max-[1195px]:px-[3%] min-h-screen flex flex-col items-center justify-center gap-y-20">
 			<Heading text="Skills" />
 			<div className="w-full flex justify-between flex-wrap gap-x-8 gap-y-10">
 				{skillsData.map((item, i) => (
@@ -33,7 +35,7 @@ export default function Skills() {
 						whileHover={{ scale: 1.1 }}
 						viewport={{ margin: "50px", once: true }}
 						key={i}
-						className="flex items-center justify-center gap-x-3 border border-red-300 rounded-xl px-5 py-2 bg-zinc-200 shadow-2xl">
+						className="flex items-center justify-center gap-x-3 border border-red-300 rounded-xl px-5 py-2 bg-zinc-200 dark:bg-gray-300 transition-colors shadow-2xl">
 						<Image
 							src={item.icon}
 							alt="Skills Image"

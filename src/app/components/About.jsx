@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import Heading from "./sub/Heading";
+import { useApp } from "@/app/page";
 import { motion } from "framer-motion";
 
 import { aboutText } from "@/assets";
 
 export default function About() {
+	const { darkTheme, setDarkTheme } = useApp();
 	return (
-		<div className="px-[19%] pt-[90px] pb-[200px] max-[1516px]:px-[12%] max-[1195px]:px-[3%] max-[1195px]:h-full">
+		<div
+			id="about"
+			className="px-[19%] pt-[90px] pb-[200px] max-[1516px]:px-[12%] max-[1195px]:px-[3%] max-[1195px]:h-full">
 			<Heading text="About Me" />
 			<div className="grid grid-cols-2 items-center gap-[0px] max-[939px]:grid-cols-1 max-[939px]:gap-[80px]">
 				<motion.div
@@ -32,7 +36,7 @@ export default function About() {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.7, delay: 0.4 }}
 						viewport={{ once: true }}
-						className="text-[18px] leading-[1.9] mb-[40px] opacity-85">
+						className="text-[18px] leading-[1.9] mb-[40px] opacity-85 dark:text-gray-200 transition-colors">
 						{aboutText}
 					</motion.p>
 					<motion.a
@@ -40,15 +44,26 @@ export default function About() {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.7, delay: 0.4 }}
 						viewport={{ once: true }}
-						href="#"
-						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase">
-						<Image
-							src={"/download-line.svg"}
-							alt="download icon"
-							width={15}
-							height={15}
-							className="inline-block mr-[5px]"
-						/>
+						href="/SoeNayLin's_CV.pdf"
+						download=""
+						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase dark:text-gray-200 transition-colors">
+						{darkTheme ? (
+							<Image
+								src={"/download-line-white.svg"}
+								alt="download icon"
+								width={15}
+								height={15}
+								className="inline-block mr-[5px]"
+							/>
+						) : (
+							<Image
+								src={"/download-line.svg"}
+								alt="download icon"
+								width={15}
+								height={15}
+								className="inline-block mr-[5px]"
+							/>
+						)}
 						Download CV
 					</motion.a>
 				</div>

@@ -29,7 +29,9 @@ export default function Projects() {
 	}, [index]);
 
 	return (
-		<div className="min-h-screen py-20 px-[19%] max-[1516px]:px-[12%] max-[1195px]:px-[3%]">
+		<div
+			id="portfolio"
+			className="min-h-screen py-20 px-[19%] max-[1516px]:px-[12%] max-[1195px]:px-[3%]">
 			<Heading text={"Projects"} />
 			<div className="flex flex-wrap items-center justify-between gap-4 py-10">
 				{projectsButton.map((item, index) => (
@@ -44,7 +46,7 @@ export default function Projects() {
 							setIndex(index);
 						}}
 						key={index}
-						className="border border-red-300 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-900 shadow-2xl">
+						className="border border-red-300 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-900 dark:text-gray-200 transition-colors shadow-2xl">
 						{item}
 					</motion.button>
 				))}

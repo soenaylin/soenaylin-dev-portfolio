@@ -3,26 +3,35 @@
 import Image from "next/image";
 import { navTexts } from "@/assets";
 import NavButton from "./sub/NavButton";
-import { darkModeIcon } from "@/assets";
 import { useApp } from "@/app/page";
 import { motion } from "framer-motion";
 
 export default function Header() {
-	const { showDrawer, setShowDrawer } = useApp();
+	const { showDrawer, setShowDrawer, darkTheme } = useApp();
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: -100 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.7, delay: 0.4 }}
 			className={`fixed bg-transparent backdrop-blur-[25px] right-0 top-0 z-40 w-full flex items-center justify-between py-[33px] px-[9%]  max-[1535px]:py-[15px] max-[1535px]:px-[3%]`}>
-			<a href="#">
-				<Image
-					src={"/snl-black-logo.png"}
-					alt="snl black logo"
-					width={90.44}
-					height={56.61}
-					className="w-[64px] h-auto"
-				/>
+			<a href="#home">
+				{darkTheme ? (
+					<Image
+						src={"/snl-white-logo.png"}
+						alt="snl white logo"
+						width={90.44}
+						height={56.61}
+						className="w-[64px] h-auto"
+					/>
+				) : (
+					<Image
+						src={"/snl-black-logo.png"}
+						alt="snl black logo"
+						width={90.44}
+						height={56.61}
+						className="w-[64px] h-auto"
+					/>
+				)}
 			</a>
 
 			{/* max-[756px]:hidden */}
@@ -34,8 +43,8 @@ export default function Header() {
 					<li
 						key={index}
 						onClick={() => setShowDrawer(false)}
-						className="ml-[60px] font-light border-b-2 border-transparent hover:border-current transition-colors duration-300 max-[756px]:ml-0 max-[756px]:mb-[24px]">
-						<a href="#">{text}</a>
+						className="ml-[60px] font-light border-b-2 border-transparent hover:border-current duration-300 max-[756px]:ml-0 max-[756px]:mb-[24px] dark:text-gray-200 transition-colors">
+						<a href={text.link}>{text.name}</a>
 					</li>
 				))}
 				{/* <li className="ml-[60px]">

@@ -1,5 +1,26 @@
 //navbar
-export const navTexts = ["Home", "About", "Skills", "Portfolio", "Contact"];
+export const navTexts = [
+	{
+		name: "Home",
+		link: "#home",
+	},
+	{
+		name: "About",
+		link: "#about",
+	},
+	{
+		name: "Skills",
+		link: "#skills",
+	},
+	{
+		name: "Portfolio",
+		link: "#portfolio",
+	},
+	{
+		name: "Contact",
+		link: "#contact",
+	},
+];
 
 export const darkModeIcon = "/icons/night-mode.png";
 
@@ -7,14 +28,41 @@ export const darkModeIcon = "/icons/night-mode.png";
 export const heroIcons = [
 	{
 		icon: "/icons/facebook.png",
+		link: "https://www.facebook.com/soenay.lin.9083/",
 	},
 	{
 		icon: "/icons/linkedin.png",
+		link: "https://www.linkedin.com/in/soe-nay-lin-97b19128b/",
 	},
 	{
 		icon: "/icons/github-icon.png",
+		link: "https://github.com/soenaylin?tab=repositories",
 	},
 ];
+
+export const heroIconsWhite = [
+	{
+		icon: "/icons/facebook-white.png",
+		link: "https://www.facebook.com/soenay.lin.9083/",
+	},
+	{
+		icon: "/icons/linkedin-white.png",
+		link: "https://www.linkedin.com/in/soe-nay-lin-97b19128b/",
+	},
+	{
+		icon: "/icons/github-icon-white.png",
+		link: "https://github.com/soenaylin?tab=repositories",
+	},
+];
+
+export const downloadIcon = (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		fill="currentColor">
+		<path d="M3 19H21V21H3V19ZM13 13.1716L19.0711 7.1005L20.4853 8.51472L12 17L3.51472 8.51472L4.92893 7.1005L11 13.1716V2H13V13.1716Z"></path>
+	</svg>
+);
 
 export const heroDiscription =
 	"Hi, I'm Soe Nay Lin. I am a Junior Web Developer specialized in React and Next.";
@@ -166,51 +214,54 @@ export const projectsButton = [
 	"NextJS",
 	"Framer Motion",
 	"Figma",
+	"Radix-UI",
+	"Vite",
+	"MUI",
 ];
 
 export const projectsData = [
 	{
-		name: "SparkleGrove.com",
-		desc: "A lifestyle blog featuring DIY crafts, home decor ideas, and inspiration for creating a cozy and stylish living space.",
+		name: "Movie Directory Website",
+		desc: "The movie directory website is a web application that allows users to browse, search, and discover movies. It provides information about various movies.",
 		url: "/projects/image-1.jpg",
-		tech: ["Figma", "Photoshop", "HTML"],
+		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "NextJS", "Radix-UI"],
 	},
 	{
-		name: "TechTrekker.net",
-		desc: "A technology news and review site covering the latest gadgets, software updates, and trends in the tech industry.",
+		name: "Social Media Web",
+		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-2.jpg",
-		tech: ["Figma", "Photoshop"],
+		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
 	},
 	{
-		name: "CozyNestHomes.org",
-		desc: "A resource for homeowners and renters alike, offering tips on interior design, home improvement projects, and sustainable living practices.",
+		name: "Todo List Web App",
+		desc: "A simple and intuitive todo list web application that helps users organize their tasks, set priorities, and track their progress efficiently.",
 		url: "/projects/image-3.jpg",
-		tech: ["HTML", "CSS", "JavaScript"],
+		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
 	},
 	{
-		name: "WanderLuxeTravels.co",
-		desc: "A travel website that provides luxury travel guides, destination reviews, and tips for planning unforgettable vacations.",
+		name: "Social Media Web",
+		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-4.jpg",
-		tech: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
 	},
-	{
-		name: "ByteBoosters.io",
-		desc: "A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.",
-		url: "/projects/image-5.jpg",
-		tech: ["Figma", "ReactJS", "TailwindCSS", "CSS"],
-	},
-	{
-		name: "GreenLeafGardens.biz",
-		desc: "An online store and community hub for gardening enthusiasts, featuring a wide range of plants, gardening tools, and expert advice.",
-		url: "/projects/image-6.jpg",
-		tech: ["ReactJS", "TailwindCSS", , "CSS", "FramerMotion"],
-	},
-	{
-		name: "PixelPerfectDesigns.info",
-		desc: "A graphic design portfolio showcasing the work of a freelance designer, including branding, web design, and illustration projects.",
-		url: "/projects/image-7.jpg",
-		tech: ["NextJS", "FramerMotion"],
-	},
+	// {
+	// 	name: "ByteBoosters.io",
+	// 	desc: "A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.",
+	// 	url: "/projects/image-5.jpg",
+	// 	tech: ["Figma", "ReactJS", "TailwindCSS", "CSS"],
+	// },
+	// {
+	// 	name: "GreenLeafGardens.biz",
+	// 	desc: "An online store and community hub for gardening enthusiasts, featuring a wide range of plants, gardening tools, and expert advice.",
+	// 	url: "/projects/image-6.jpg",
+	// 	tech: ["ReactJS", "TailwindCSS", , "CSS", "FramerMotion"],
+	// },
+	// {
+	// 	name: "PixelPerfectDesigns.info",
+	// 	desc: "A graphic design portfolio showcasing the work of a freelance designer, including branding, web design, and illustration projects.",
+	// 	url: "/projects/image-7.jpg",
+	// 	tech: ["NextJS", "FramerMotion"],
+	// },
 	// {
 	// 	name: "HarmonyHealthHub.com",
 	// 	desc: " A wellness website focused on holistic health, offering articles on nutrition, fitness, mental health, and alternative therapies.",
@@ -236,7 +287,7 @@ export const projectsData = [
 export const contactEmail = "soenaylin.g@gmail.com";
 export const contactPhone = "+95 976 739 091 6";
 export const contactAddress =
-	"237 Zingama Road.\
+	"Zingama Road.\
 Thaketa, Yangon, Myanmar";
 
 // night mode

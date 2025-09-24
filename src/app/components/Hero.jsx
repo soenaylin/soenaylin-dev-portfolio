@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { heroIcons, heroDiscription } from "@/assets";
+import { heroIcons, heroIconsWhite, heroDiscription } from "@/assets";
+import { useApp } from "@/app/page";
 import { motion } from "framer-motion";
 
 export default function () {
+	const { darkTheme, setDarkTheme } = useApp();
 	const variants = {
 		visible: (i) => ({
 			opacity: 1,
@@ -20,32 +22,45 @@ export default function () {
 	};
 
 	return (
-		<div className="relative">
+		<div
+			id="home"
+			className="relative">
 			<div className="h-full w-full min-h-svh relative grid grid-cols-2 gap-8 px-[19%] place-items-center max-[1516px]:px-[12%] max-[1195px]:px-[3%] max-[1195px]:h-full max-[1195px]:grid-cols-1 max-[1195px]:gap-[16px]">
 				<motion.div
 					initial={{ opacity: 0, y: -100 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.4 }}
 					className="max-[1195px]:pt-[115px]">
-					<h1 className="text-[40px] opacity-80 font-bold mb-[24px] max-[1340px]:text-[25px] max-[1340px]:mb-[20px]">
+					<h1 className="text-[40px] opacity-80 font-bold mb-[24px] max-[1340px]:text-[25px] max-[1340px]:mb-[20px] dark:text-white transition-colors">
 						Soe Nay Lin
 					</h1>
-					<h1 className="text-[40px] opacity-80 font-bold mb-[36px] max-[1340px]:text-[25px] max-[1340px]:mb-[20px]">
+					<h1 className="text-[40px] opacity-80 font-bold mb-[36px] max-[1340px]:text-[25px] max-[1340px]:mb-[20px] dark:text-white transition-colors">
 						Junior Web Developer
 					</h1>
-					<p className="text-lg opacity-85 leading-[1.9] mb-[40px] max-[1340px]:text-[15px]">
+					<p className="text-lg opacity-85 leading-[1.9] mb-[40px] max-[1340px]:text-[15px] dark:text-gray-200 transition-colors">
 						{heroDiscription}
 					</p>
 					<a
-						href="#"
-						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase">
-						<Image
-							src={"/download-line.svg"}
-							alt="download icon"
-							width={15}
-							height={15}
-							className="inline-block mr-[5px]"
-						/>
+						href="/SoeNayLin's_CV.pdf"
+						download=""
+						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase  dark:text-gray-200 transition-colors">
+						{darkTheme ? (
+							<Image
+								src={"/download-line-white.svg"}
+								alt="download icon"
+								width={15}
+								height={15}
+								className="inline-block mr-[5px]"
+							/>
+						) : (
+							<Image
+								src={"/download-line.svg"}
+								alt="download icon"
+								width={15}
+								height={15}
+								className="inline-block mr-[5px]"
+							/>
+						)}
 						Download CV
 					</a>
 				</motion.div>
@@ -69,32 +84,36 @@ export default function () {
 						width={400}
 						height={400}
 						priority={true}
-						className="h-auto max-w-[325px] absolute ml-[20px] top-[104px] max-[1340px]:w-[280px] max-[415px]:w-[205px]"
+						className="h-auto max-w-[325px] absolute ml-[20px] top-[104px] max-[1340px]:w-[280px] max-[415px]:w-[205px] dark:opacity-[90%]"
 					/>
 				</motion.div>
 			</div>
 			<div className="max-[1195px]:hidden">
 				<ul className="absolute top-1/2 px-[9%] -translate-y-1/2 max-[1535px]:px-[3%]">
-					{heroIcons.map((item, index) => (
-						<motion.li
-							custom={index}
-							variants={variants}
-							initial="hidden"
-							whileInView="visible"
-							whileHover={{ scale: 1.1 }}
-							viewport={{ margin: "50px", once: true }}
-							key={index}
-							className="my-[26px] text-[24px]">
-							<a href="#">
-								<Image
-									src={item.icon}
-									alt="social icon"
-									width={24}
-									height={24}
-								/>
-							</a>
-						</motion.li>
-					))}
+					{(darkTheme ? heroIconsWhite : heroIcons).map(
+						(item, index) => (
+							<motion.li
+								custom={index}
+								variants={variants}
+								initial="hidden"
+								whileInView="visible"
+								whileHover={{ scale: 1.1 }}
+								viewport={{ margin: "50px", once: true }}
+								key={index}
+								className="my-[26px] text-[24px]">
+								<a
+									href={item.link}
+									target="_blank">
+									<Image
+										src={item.icon}
+										alt="social icon"
+										width={24}
+										height={24}
+									/>
+								</a>
+							</motion.li>
+						)
+					)}
 				</ul>
 			</div>
 		</div>

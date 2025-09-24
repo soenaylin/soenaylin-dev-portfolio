@@ -50,7 +50,7 @@ export default function Education() {
 									type: "spring",
 									stiffness: 50,
 								}}
-								className="relative flex flex-col gap-y-3 border border-red-300 rounded-md bg-white p-4 tracking-wide z-20 max-[639px]:text-sm shadow-2xl">
+								className="relative flex flex-col gap-y-3 border border-red-300 rounded-md bg-white dark:bg-gray-300 transition-colors p-4 tracking-wide z-20 max-[639px]:text-sm shadow-2xl">
 								<h1 className="text-xl max-[639px]:text-lg font-light text-gray-700">
 									{data.title}
 								</h1>
@@ -86,7 +86,7 @@ export default function Education() {
 								</span>
 							</motion.div>
 							<div
-								className={`w-14 absolute top-20 border border-gray-300 rounded-full aspect-square grid place-items-center -translate-y-1/2 z-10 bg-white text-red-400 font-light shadow-2xl ${
+								className={`w-14 absolute top-20 border border-gray-300 rounded-full aspect-square grid place-items-center -translate-y-1/2 z-10 bg-white dark:bg-gray-300 transition-colors text-red-400 font-light shadow-2xl ${
 									i % 2 === 0
 										? "left-full -translate-x-1/2 max-[1150px]:left-1/2"
 										: "right-full translate-x-1/2 max-[1150px]:right-1/2"

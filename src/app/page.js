@@ -21,6 +21,7 @@ export default function Home() {
 	const [id, setId] = useState(0);
 	const compsRef = useRef(null);
 	const [showDrawer, setShowDrawer] = useState(false);
+	const [darkTheme, setDarkTheme] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -44,6 +45,8 @@ export default function Home() {
 			value={{
 				showDrawer,
 				setShowDrawer,
+				darkTheme,
+				setDarkTheme,
 			}}>
 			<ThemeToggle>
 				<Header />

@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body
 				cz-shortcut-listen="true"
-				className={`${poppins.className} bg-[#f2f4f3]`}>
+				className={`${poppins.className}`}>
 				{children}
 			</body>
 		</html>

@@ -1,20 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { heroIcons } from "@/assets";
+import { useApp } from "@/app/page";
+import { heroIcons, heroIconsWhite } from "@/assets";
 
 export default function Footer() {
+	const { darkTheme, setDarkTheme } = useApp();
 	return (
 		<div className="flex py-[20px] items-center justify-between w-full h-[93px] bg-[#D9D9D9]/20 px-[19%] max-[1516px]:px-[12%] max-[1195px]:px-[3%] max-[660px]:flex-col max-[660px]:h-auto">
 			<div className="max-[660px]:mb-[50px]">
-				<a href="#">
-					<Image
-						src={"/snl-black-logo.png"}
-						alt="snl black logo"
-						width={90.44}
-						height={56.61}
-						className="w-[64px] h-auto"
-					/>
+				<a href="#home">
+					{darkTheme ? (
+						<Image
+							src={"/snl-white-logo.png"}
+							alt="snl white logo"
+							width={90.44}
+							height={56.61}
+							className="w-[64px] h-auto"
+						/>
+					) : (
+						<Image
+							src={"/snl-black-logo.png"}
+							alt="snl black logo"
+							width={90.44}
+							height={56.61}
+							className="w-[64px] h-auto"
+						/>
+					)}
 				</a>
 			</div>
 			<p className="text-[14px] text-[#888888] max-[660px]:mb-[25px]">
@@ -22,21 +34,25 @@ export default function Footer() {
 			</p>
 			<div className="">
 				<ul className="flex gap-[20px]">
-					{heroIcons.map((item, index) => (
-						<li
-							key={index}
-							className="my-[26px] text-[24px]">
-							<a href="#">
-								<Image
-									src={item.icon}
-									alt="social icon"
-									width={24}
-									height={24}
-									className="opacity-[65%]"
-								/>
-							</a>
-						</li>
-					))}
+					{(darkTheme ? heroIconsWhite : heroIcons).map(
+						(item, index) => (
+							<li
+								key={index}
+								className="my-[26px] text-[24px]">
+								<a
+									href={item.link}
+									target="_blank">
+									<Image
+										src={item.icon}
+										alt="social icon"
+										width={24}
+										height={24}
+										className="opacity-[65%]"
+									/>
+								</a>
+							</li>
+						)
+					)}
 				</ul>
 			</div>
 		</div>
