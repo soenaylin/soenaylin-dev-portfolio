@@ -43,7 +43,7 @@ export default function () {
 					<a
 						href="/SoeNayLin's_CV.pdf"
 						download=""
-						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase  dark:text-gray-200 transition-colors">
+						className="inline-block border border-[#7d5537] py-[12px] px-[30px] leading-[1.4] text-[14px] rounded-[30px] uppercase  dark:text-gray-200 transition-colors hover:bg-[#7d5537] active:bg-[#7d5537]">
 						{darkTheme ? (
 							<Image
 								src={"/download-line-white.svg"}
