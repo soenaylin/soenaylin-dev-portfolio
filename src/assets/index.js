@@ -69,7 +69,7 @@ export const heroDiscription =
 
 //about
 export const aboutText =
-	" I am currently a junior web developer specilize in ReactJs. Strongly interested in Web Development and App Development. I like to learn new technologies and exploring others programming fields. I also like to collaborate with others teams and sharing opinions each other to improve or skills and expend our tech field.";
+	" I am currently a junior web developer specilize in ReactJs. Strongly interested in Web Development and App Development. I like to learn new technologies and exploring others programming fields. I also like to collaborate with others teams and sharing opinions each other to improve skills and expend our tech field.";
 
 //experience
 export const experienceData = [
