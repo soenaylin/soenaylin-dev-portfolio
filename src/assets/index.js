@@ -65,7 +65,7 @@ export const downloadIcon = (
 );
 
 export const heroDiscription =
-	"Hi, I'm Soe Nay Lin. I am a Junior Web Developer specialized in React and Next.";
+	"Hi, I'm Soe Nay Lin. I am a Junior Web Developer specialized in React.";
 
 //about
 export const aboutText =
