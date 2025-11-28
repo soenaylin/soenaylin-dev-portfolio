@@ -225,24 +225,28 @@ export const projectsData = [
 		desc: "The movie directory website is a web application that allows users to browse, search, and discover movies. It provides information about various movies.",
 		url: "/projects/image-1.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "NextJS", "Radix-UI"],
+		link: "https://movie-directory-website.vercel.app/",
 	},
 	{
 		name: "Social Media Web",
 		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-2.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
+		link: "https://announcement-coming-soon.vercel.app/",
 	},
 	{
 		name: "Todo List Web App",
 		desc: "A simple and intuitive todo list web application that helps users organize their tasks, set priorities, and track their progress efficiently.",
 		url: "/projects/image-3.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
+		link: "https://todo-web-phi.vercel.app/",
 	},
 	{
 		name: "Social Media Web",
 		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-4.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
+		link: "https://announcement-coming-soon.vercel.app/",
 	},
 	// {
 	// 	name: "ByteBoosters.io",
