@@ -36,7 +36,7 @@ export default function ThemeToggle({ children }) {
 			darkThemeParsed ? addDarkTheme() : removeDarkTheme();
 		}
 
-		console.log(darkTheme, systemTheme, darkThemeParsed);
+		// console.log(darkTheme, systemTheme, darkThemeParsed);
 	});
 
 	return (
