@@ -232,7 +232,7 @@ export const projectsData = [
 		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-2.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
-		link: "https://announcement-coming-soon.vercel.app/",
+		link: "https://social-media-web-gold.vercel.app/",
 	},
 	{
 		name: "Todo List Web App",
@@ -246,7 +246,7 @@ export const projectsData = [
 		desc: "A social media web client which is provides a user-friendly interface for users to connect with friends, share content, and engage with the platform's features.",
 		url: "/projects/image-4.jpg",
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
-		link: "https://announcement-coming-soon.vercel.app/",
+		link: "https://social-media-web-gold.vercel.app/",
 	},
 	// {
 	// 	name: "ByteBoosters.io",
