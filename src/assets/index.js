@@ -65,11 +65,15 @@ export const downloadIcon = (
 );
 
 export const heroDiscription =
-	"Hi, I'm Soe Nay Lin. I am a Junior Web Developer specialized in React.";
+	"Hi, I'm Soe Nay Lin. I’m a web developer passionate about building clean, responsive, and user-friendly web applications using modern web technologies.";
 
 //about
-export const aboutText =
-	" I am currently a junior web developer specilize in ReactJs. Strongly interested in Web Development and App Development. I like to learn new technologies and exploring others programming fields. I also like to collaborate with others teams and sharing opinions each other to improve skills and expend our tech field.";
+export const aboutText = {
+	firstPara:
+		"I’m a web developer who enjoys building responsive and user-friendly web applications. I focus on writing clean, maintainable code and turning ideas into real, working products.",
+	secondPara:
+		"I’ve worked with technologies like HTML, CSS, JavaScript, React, Node.js, and MongoDB, and I enjoy learning new tools and improving my problem-solving skills. Currently, I’m sharpening my frontend and full-stack development skills by building real-world projects.",
+};
 
 //experience
 export const experienceData = [
@@ -293,6 +297,9 @@ export const contactPhone = "+95 976 739 091 6";
 export const contactAddress =
 	"Zingama Road.\
 Thaketa, Yangon, Myanmar";
+export const contactGithub = "https://github.com/soenaylin";
+export const contactLinkedin =
+	"https://www.linkedin.com/in/soe-nay-lin-97b19128b/";
 
 // night mode
 

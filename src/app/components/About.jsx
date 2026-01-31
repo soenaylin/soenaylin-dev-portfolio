@@ -31,14 +31,15 @@ export default function About() {
 				</motion.div>
 
 				<div className="max-[1601px]:pl-[50px] max-[1516px]:pl-0">
-					<motion.p
+					<motion.div
 						initial={{ opacity: 0, x: 100 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.7, delay: 0.4 }}
 						viewport={{ once: true }}
 						className="text-[18px] leading-[1.9] mb-[40px] opacity-85 dark:text-gray-200 transition-colors">
-						{aboutText}
-					</motion.p>
+						<p className="mb-[16px]">{aboutText.firstPara}</p>
+                        <p>{aboutText.secondPara}</p>
+					</motion.div>
 					<motion.a
 						initial={{ opacity: 0, x: -100 }}
 						whileInView={{ opacity: 1, x: 0 }}
