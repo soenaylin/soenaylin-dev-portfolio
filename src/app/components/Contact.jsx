@@ -72,7 +72,7 @@ export default function Contact() {
 						{contactPhone}
 					</p>
 					<p className="self-start text-[20px] opacity-[80%] dark:text-gray-200 transition-colors">
-						<a href="https://github.com/soenaylin">
+						<a target="_blank" href="https://github.com/soenaylin">
 							github.com/soenaylin
 						</a>
 					</p>
