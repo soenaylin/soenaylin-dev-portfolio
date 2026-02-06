@@ -252,12 +252,13 @@ export const projectsData = [
 		tech: ["HTML", "CSS", "JavaScript", "ReactJS", "Vite", "MUI"],
 		link: "https://social-media-web-gold.vercel.app/",
 	},
-	// {
-	// 	name: "ByteBoosters.io",
-	// 	desc: "A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.",
-	// 	url: "/projects/image-5.jpg",
-	// 	tech: ["Figma", "ReactJS", "TailwindCSS", "CSS"],
-	// },
+	{
+		name: "World Countries Data Dashboard",
+		desc: "A data dashboard for displaying world countries data, including population, language, and more. It provides a user-friendly interface for users to explore various country statistics and insights.",
+		url: "/projects/image-8.jpg",
+		tech: ["HTML", "CSS", "JavaScript"],
+		link: "https://world-countries-data-dashboard.vercel.app/",
+	},
 	// {
 	// 	name: "GreenLeafGardens.biz",
 	// 	desc: "An online store and community hub for gardening enthusiasts, featuring a wide range of plants, gardening tools, and expert advice.",
